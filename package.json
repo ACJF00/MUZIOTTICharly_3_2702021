@@ -1,0 +1,19 @@
+{
+  "name": "muziotticharly_3_270221",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./style/main.scss:./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ACJF00/MUZIOTTICharly_3_270221.git"
+  },
+  "author": "Charly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ACJF00/MUZIOTTICharly_3_270221/issues"
+  },
+  "homepage": "https://github.com/ACJF00/MUZIOTTICharly_3_270221#readme"
+}
