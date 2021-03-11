@@ -121,6 +121,17 @@ header img {
   object-fit: cover;
   border-radius: 10px 10px 0px 0px;
 }
+.resto article .txt_resto {
+  display: flex;
+}
+.resto article .txt_resto .description {
+  width: 100%;
+}
+.resto article .txt_resto i.far.fa-heart {
+  display: flex;
+  align-items: center;
+  padding-right: 1em;
+}
 
 footer {
   background-color: #2F4F4F;
@@ -132,6 +143,10 @@ footer img {
 }
 footer li {
   list-style: none;
+}
+footer li .fas {
+  font-weight: 600;
+  color: white;
 }
 footer li a {
   text-decoration: none;

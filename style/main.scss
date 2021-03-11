@@ -123,6 +123,17 @@ header{
             object-fit: cover;
             border-radius: 10px 10px 0px 0px;
         }
+        .txt_resto{
+            display: flex;
+            .description{
+                width: 100%;
+            }
+            i.far.fa-heart {
+                display: flex;
+                align-items: center;
+                padding-right: 1em;
+            }
+        }
     }
 }
 
@@ -135,6 +146,10 @@ footer{
     }
     li{
         list-style: none;
+        .fas {
+            font-weight: 600;
+            color: white;
+        }
         a{
             text-decoration: none;
             color: white;
