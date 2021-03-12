@@ -20,13 +20,47 @@ img {
 
 .details_menu {
   background-color: #F6F6F6;
-  background-color: #F6F6F6;
-  position: absolute;
+  position: relative;
   width: 100%;
   margin-top: -3em;
   border-radius: 2em;
   padding-top: 1em;
+}
+.details_menu h1 {
+  padding-left: 0.3em;
+}
+.details_menu section {
   padding-left: 1em;
+  height: 18em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.details_menu .menu__card {
+  /* border: solid 1px; */
+  border-radius: 10px 10px 10px 10px;
+  width: 10;
+  width: 85%;
+  height: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  padding-top: -1em;
+  padding: 1em;
+  box-shadow: 0.15em 0.15em 0.15em 0.15em #dcdcdc;
+}
+.details_menu .menu__card .menu_description {
+  padding-left: 1em;
+}
+.details_menu .menu__card h3 {
+  margin-top: -0.5em;
+  margin-bottom: -0.1em;
+}
+.details_menu .menu__card p {
+  align-self: center;
+  margin-top: -0.2em;
+}
+.details_menu .menu__card .plat_prix {
+  padding-right: 1em;
 }
 
 footer {
