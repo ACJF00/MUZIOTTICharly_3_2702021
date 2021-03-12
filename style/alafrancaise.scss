@@ -7,7 +7,7 @@ body{
 }
 
 h1{
-    font-family: 'Shrikhand', sans-serif, font-awesome;
+    font-family: 'Shrikhand', sans-serif;
 }
 
 header{
@@ -31,8 +31,13 @@ img{
     margin-top: -3em;
     border-radius: 2em 2em 0em 0em;
     padding-top: 1em;
-    h1{
-        padding-left: 0.3em;
+    .resto_nom{
+        display: flex;
+        justify-content: space-around;
+        i{
+            display: flex;
+            align-items: center;
+        }
     }
     section{
     padding-left: 1em;
@@ -73,9 +78,9 @@ img{
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: dding-b;
     padding-bottom: 4em;
     margin-top: -2em;
+    padding-top: 4em;
         #commander{
         height: 3em;
         display: flex;
