@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap");
 body {
   font-family: "Roboto", sans-serif, font-awesome;
+  margin: 0;
 }
 
 html {
@@ -95,9 +96,8 @@ header img {
   padding-bottom: 1.5em;
 }
 .resto h1 {
-  width: 100%;
+  width: 85%;
   margin-bottom: -0.5em;
-  margin-left: 0.7em;
 }
 .resto a {
   text-decoration: none;
@@ -145,8 +145,11 @@ footer li {
   list-style: none;
 }
 footer li .fas {
-  font-weight: 600;
   color: white;
+  width: 20px;
+}
+footer li i.fas.fa-hands-helping {
+  font-size: 10px;
 }
 footer li a {
   text-decoration: none;

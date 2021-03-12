@@ -4,6 +4,7 @@
 body
      {
         font-family: 'Roboto', sans-serif, font-awesome;
+        margin: 0;
     }
 
 html{
@@ -96,9 +97,8 @@ header{
     justify-content: space-around;
     padding-bottom: 1.5em;
     h1{
-        width: 100%;
+        width: 85%;
         margin-bottom: -0.5em;
-        margin-left: 0.7em;
     }
     a{
        text-decoration: none;
@@ -137,6 +137,7 @@ header{
     }
 }
 
+
 footer{
     background-color: #2F4F4F;
     height: 8em;
@@ -147,8 +148,11 @@ footer{
     li{
         list-style: none;
         .fas {
-            font-weight: 600;
             color: white;
+            width: 20px;
+        }
+        i.fas.fa-hands-helping {
+            font-size: 10px;
         }
         a{
             text-decoration: none;
