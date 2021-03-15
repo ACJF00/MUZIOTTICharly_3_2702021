@@ -115,6 +115,10 @@ img{
         padding: 0 2.5em;
         border: none;
         font-size: 1.2em;
+        &:hover{
+            background-image: linear-gradient(#fca4e3, #a97fdb);
+            box-shadow: 0.15em 0.15em 0.15em 0.15em #b8b6b6;
+        }
   }
 }
 
