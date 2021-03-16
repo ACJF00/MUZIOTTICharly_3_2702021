@@ -59,6 +59,7 @@ header{
         &:hover{
             background-image: linear-gradient(#fca4e3, #a97fdb);
             box-shadow: 0.15em 0.15em 0.15em 0.15em #b8b6b6;
+            outline-style: none;
         }
     }
 }
