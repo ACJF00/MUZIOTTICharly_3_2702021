@@ -25,10 +25,11 @@ html{
     display: flex;
     justify-content: space-evenly;
     &__bar {
-        background-color: #15DEA5;
+        background-image: linear-gradient(#FF79DA, #9356DC);
         height: 100%;
         width: 1em;
-        animation: bars 1s backwards ease-in-out alternate;
+        animation: 1212.11ms ease 0ms 1 alternate-reverse none running bars;
+        animation-iteration-count: 2;
         animation-fill-mode: forwards;
         @for $i from 1 through 5 {
             &--#{$i} {
@@ -41,10 +42,12 @@ html{
 @keyframes bars {
     0% {
         transform: scaleY(0.5);
-        
+    }
+    90% {
+        transform: scaleY(1);
     }
     100% {
-        transform: scaleY(1);
+        transform: scaleY(0);
     }
 }
 
@@ -195,17 +198,44 @@ header{
             .description{
                 width: 100%;
             }
-            i.far.fa-heart {
+            i.fa-heart {
                 display: flex;
                 align-items: center;
                 padding-right: 1em;
-            }
+                color: black;
+                background-color: white;
+                border-radius: 100%;
+                padding: 0.2em;
+                height: fit-content;
+                margin-top: 2em;
+                }
+                .fa-heart::before {
+                    content: "\f004";
+                    font-weight: bold;
+                    transition: color 0.3s ease-out;
+                }
+                .fa-heart:hover::before{
+                    color:#9356DC;
+                    cursor: pointer;
+                }
             .resto_location{
                 margin-top: -0.7em;
             }
         }
     }
 
+@keyframes heart {
+    0% {
+        transform: scaleY(0.5);
+    }
+    90% {
+        transform: scaleY(1);
+    }
+    100% {
+        transform: scaleY(0);
+    }
+}
+    
 
 footer{
     background-color: #2F4F4F;

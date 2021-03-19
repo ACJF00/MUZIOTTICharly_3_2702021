@@ -81,6 +81,35 @@ img {
   background-color: white;
   margin: 0.3em 0;
   align-self: center;
+  animation: menuus 0.2s;
+  transform-origin: left;
+}
+.details_menu .menu__card--1 {
+  animation-delay: 200ms;
+}
+.details_menu .menu__card--2 {
+  animation-delay: 400ms;
+}
+.details_menu .menu__card--3 {
+  animation-delay: 600ms;
+}
+.details_menu .menu__card--4 {
+  animation-delay: 800ms;
+}
+.details_menu .menu__card--5 {
+  animation-delay: 1000ms;
+}
+.details_menu .menu__card--6 {
+  animation-delay: 1200ms;
+}
+.details_menu .menu__card--7 {
+  animation-delay: 1400ms;
+}
+.details_menu .menu__card--8 {
+  animation-delay: 1600ms;
+}
+.details_menu .menu__card--9 {
+  animation-delay: 1800ms;
 }
 .details_menu .menu__card h3 {
   margin: 0;
@@ -97,6 +126,14 @@ img {
   flex-direction: column-reverse;
 }
 
+@keyframes menuus {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .command_button {
   width: 100%;
   display: flex;
