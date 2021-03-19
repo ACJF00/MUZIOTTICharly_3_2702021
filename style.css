@@ -9,6 +9,52 @@ html {
   width: 100%;
 }
 
+.container {
+  display: flex;
+  position: absolute;
+  height: 50em;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.load {
+  width: 35%;
+  height: 6em;
+  display: flex;
+  justify-content: space-evenly;
+}
+.load__bar {
+  background-color: #15DEA5;
+  height: 100%;
+  width: 1em;
+  animation: bars 1s backwards ease-in-out alternate;
+  animation-fill-mode: forwards;
+}
+.load__bar--1 {
+  animation-delay: 200ms;
+}
+.load__bar--2 {
+  animation-delay: 400ms;
+}
+.load__bar--3 {
+  animation-delay: 600ms;
+}
+.load__bar--4 {
+  animation-delay: 800ms;
+}
+.load__bar--5 {
+  animation-delay: 1000ms;
+}
+
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 header {
   display: flex;
   justify-content: center;
@@ -45,6 +91,7 @@ header img {
   border: none;
   text-align: center;
   height: 2.5em;
+  outline-style: none;
 }
 .search #explorer {
   border-radius: 100px;

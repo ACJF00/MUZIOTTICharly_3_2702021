@@ -11,6 +11,43 @@ html{
     width: 100%;
 }
 
+.container {
+    display: flex;
+    position: absolute;
+    height: 50em;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.load {
+    width: 35%;
+    height: 6em;
+    display: flex;
+    justify-content: space-evenly;
+    &__bar {
+        background-color: #15DEA5;
+        height: 100%;
+        width: 1em;
+        animation: bars 1s backwards ease-in-out alternate;
+        animation-fill-mode: forwards;
+        @for $i from 1 through 5 {
+            &--#{$i} {
+                animation-delay: 200ms * $i;
+             }
+        }
+    }
+}
+
+@keyframes bars {
+    0% {
+        transform: scaleY(0.5);
+        
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
 header{
     display: flex;
     justify-content: center;
@@ -46,6 +83,7 @@ header{
         border: none;
         text-align: center;
         height: 2.5em;
+        outline-style: none;
     }
     #explorer{
         border-radius: 100px;
