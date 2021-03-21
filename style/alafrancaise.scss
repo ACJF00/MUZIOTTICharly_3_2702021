@@ -46,11 +46,28 @@ img{
     padding-top: 1em;
     .resto_nom{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        padding-left: 1em;
         i{
             display: flex;
             align-items: center;
             font-size: 25px;
+        }
+        i.far.fa-heart{
+            position: absolute;
+            top: 2em;
+            right: 2em;
+        }
+        i.fas.fa-heart {
+            position: absolute;
+            top: 2em;
+            right: 2em;
+            opacity: 0;
+            color: #9356DC;
+            &:hover{
+                opacity: 1;
+                transition: 0.5s ease-out;
+            }
         }
     }
     section{
@@ -81,13 +98,13 @@ img{
             background-color: white;
             margin: 0.3em 0;
             align-self: center;
-            animation: menuus 0.2s;
-            transform-origin: left;
-            @for $i from 1 through 9 {
-                &--#{$i} {
-                    animation-delay: 200ms * $i;
-                 }
-            }
+            animation: menuus 900ms;
+            transform-origin: top left;
+                @for $i from 1 through 9 {
+                    &--#{$i} {
+                        animation-delay: 90ms * $i;
+                     }
+                }
             h3{
                 margin: 0;
                 font-weight: 400;
@@ -103,7 +120,7 @@ img{
                 flex-direction: column-reverse;
             }
         }
-}
+    }
 
 @keyframes menuus{
 0% {
@@ -132,8 +149,9 @@ img{
         padding: 0 2.5em;
         border: none;
         font-size: 1.2em;
+        outline: none;
         &:hover{
-            background-image: linear-gradient(#fca4e3, #a97fdb);
+            opacity: 0.8;
             box-shadow: 0.15em 0.15em 0.15em 0.15em #b8b6b6;
             outline-style: none;
         }

@@ -46,12 +46,29 @@ img {
 }
 .details_menu .resto_nom {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-left: 1em;
 }
 .details_menu .resto_nom i {
   display: flex;
   align-items: center;
   font-size: 25px;
+}
+.details_menu .resto_nom i.far.fa-heart {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+}
+.details_menu .resto_nom i.fas.fa-heart {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  opacity: 0;
+  color: #9356DC;
+}
+.details_menu .resto_nom i.fas.fa-heart:hover {
+  opacity: 1;
+  transition: 0.5s ease-out;
 }
 .details_menu section {
   height: 18em;
@@ -81,35 +98,35 @@ img {
   background-color: white;
   margin: 0.3em 0;
   align-self: center;
-  animation: menuus 0.2s;
-  transform-origin: left;
+  animation: menuus 900ms;
+  transform-origin: top left;
 }
 .details_menu .menu__card--1 {
-  animation-delay: 200ms;
+  animation-delay: 90ms;
 }
 .details_menu .menu__card--2 {
-  animation-delay: 400ms;
+  animation-delay: 180ms;
 }
 .details_menu .menu__card--3 {
-  animation-delay: 600ms;
+  animation-delay: 270ms;
 }
 .details_menu .menu__card--4 {
-  animation-delay: 800ms;
+  animation-delay: 360ms;
 }
 .details_menu .menu__card--5 {
-  animation-delay: 1000ms;
+  animation-delay: 450ms;
 }
 .details_menu .menu__card--6 {
-  animation-delay: 1200ms;
+  animation-delay: 540ms;
 }
 .details_menu .menu__card--7 {
-  animation-delay: 1400ms;
+  animation-delay: 630ms;
 }
 .details_menu .menu__card--8 {
-  animation-delay: 1600ms;
+  animation-delay: 720ms;
 }
 .details_menu .menu__card--9 {
-  animation-delay: 1800ms;
+  animation-delay: 810ms;
 }
 .details_menu .menu__card h3 {
   margin: 0;
@@ -152,9 +169,10 @@ img {
   padding: 0 2.5em;
   border: none;
   font-size: 1.2em;
+  outline: none;
 }
 .command_button #commander:hover {
-  background-image: linear-gradient(#fca4e3, #a97fdb);
+  opacity: 0.8;
   box-shadow: 0.15em 0.15em 0.15em 0.15em #b8b6b6;
   outline-style: none;
 }
