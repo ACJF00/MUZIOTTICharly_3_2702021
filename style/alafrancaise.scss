@@ -100,11 +100,24 @@ img{
             align-self: center;
             animation: menuus 900ms;
             transform-origin: top left;
+            overflow: auto;
                 @for $i from 1 through 9 {
                     &--#{$i} {
                         animation-delay: 90ms * $i;
                      }
                 }
+                &:hover .checkbox_container {
+                    margin: -0.6em -0.6em -0.6em 0em;
+                    animation: checkbox 500ms;
+                    transform-origin: right;
+                    }
+                &:hover .i.far.fa-check-circle {
+                    transform: rotate(360deg);
+                }
+                }
+            .menu_description{
+                width: 87%;
+            }
             h3{
                 margin: 0;
                 font-weight: 400;
@@ -119,8 +132,27 @@ img{
                 display: flex;
                 flex-direction: column-reverse;
             }
+            .checkbox_container{
+                background-color: #99E2D0;
+                width: 10%;
+                height: 1;
+                margin-right: -150px;
+                color: white;
+                transform: scaleX(1) rotate(360°);
+                display: flex;
+                justify-content: center;
+                .checkbox {
+                    i.far.fa-check-circle {
+                        display: flex;
+                        height: 100%;
+                        align-items: center;
+                        font-size: 1.3em;
+                        transform: rotate(180deg);
+                    }
+                }
+            }
         }
-    }
+
 
 @keyframes menuus{
 0% {
@@ -131,6 +163,16 @@ img{
     transform: scale(1);
 }
 }
+
+@keyframes checkbox{
+    0% {
+        transform: scaleX(0.8);
+    }
+    
+    100% {
+        transform: scaleX(1);
+    }
+    }
 
 .command_button {
     width: 100%;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap");
 body {
@@ -100,6 +101,7 @@ img {
   align-self: center;
   animation: menuus 900ms;
   transform-origin: top left;
+  overflow: auto;
 }
 .details_menu .menu__card--1 {
   animation-delay: 90ms;
@@ -128,19 +130,47 @@ img {
 .details_menu .menu__card--9 {
   animation-delay: 810ms;
 }
-.details_menu .menu__card h3 {
+.details_menu .menu__card:hover .checkbox_container {
+  margin: -0.6em -0.6em -0.6em 0em;
+  animation: checkbox 500ms;
+  transform-origin: right;
+}
+.details_menu .menu__card:hover .i.far.fa-check-circle {
+  transform: rotate(360deg);
+}
+.details_menu .menu_description {
+  width: 87%;
+}
+.details_menu h3 {
   margin: 0;
   font-weight: 400;
 }
-.details_menu .menu__card p {
+.details_menu p {
   margin: 0;
   font-size: 14px;
   font-weight: 300;
 }
-.details_menu .menu__card .plat_prix {
+.details_menu .plat_prix {
   padding-right: 1em;
   display: flex;
   flex-direction: column-reverse;
+}
+.details_menu .checkbox_container {
+  background-color: #99E2D0;
+  width: 10%;
+  height: 1;
+  margin-right: -150px;
+  color: white;
+  transform: scaleX(1) rotate(360°);
+  display: flex;
+  justify-content: center;
+}
+.details_menu .checkbox_container .checkbox i.far.fa-check-circle {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  font-size: 1.3em;
+  transform: rotate(180deg);
 }
 
 @keyframes menuus {
@@ -149,6 +179,14 @@ img {
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes checkbox {
+  0% {
+    transform: scaleX(0.8);
+  }
+  100% {
+    transform: scaleX(1);
   }
 }
 .command_button {
