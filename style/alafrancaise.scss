@@ -110,6 +110,7 @@ img{
                     margin: -0.6em -0.6em -0.6em 0em;
                     animation: checkbox 500ms;
                     transform-origin: right;
+                    width: 5em;
                     }
                 &:hover .checkbox_container .checkbox {
                     transform: rotate(360deg);
@@ -117,7 +118,20 @@ img{
                 }
                 }
             .menu_description{
-                width: 87%;
+                width: 73%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                .plat_nom {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+                .plat_compo {
+                    text-overflow: ellipsis;
+                    /* display: flex; */
+                    flex-wrap: nowrap;
+                    overflow: hidden;
+                }
             }
             h3{
                 margin: 0;
@@ -129,15 +143,15 @@ img{
                 font-weight: 300;
             }
             .plat_prix{
-                padding-right: 1em;
                 display: flex;
                 flex-direction: column-reverse;
+                padding-right: 0.8em;
             }
             .checkbox_container{
                 background-color: #99E2D0;
                 width: 10%;
                 height: 1;
-                margin-right: -150px;
+                margin-right: -99px;
                 color: white;
                 transform: scaleX(1);
                 display: flex;

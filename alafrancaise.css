@@ -133,13 +133,27 @@ img {
   margin: -0.6em -0.6em -0.6em 0em;
   animation: checkbox 500ms;
   transform-origin: right;
+  width: 5em;
 }
 .details_menu .menu__card:hover .checkbox_container .checkbox {
   transform: rotate(360deg);
   transition: 0.3s ease-out;
 }
 .details_menu .menu_description {
-  width: 87%;
+  width: 73%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.details_menu .menu_description .plat_nom {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.details_menu .menu_description .plat_compo {
+  text-overflow: ellipsis;
+  /* display: flex; */
+  flex-wrap: nowrap;
+  overflow: hidden;
 }
 .details_menu h3 {
   margin: 0;
@@ -151,15 +165,15 @@ img {
   font-weight: 300;
 }
 .details_menu .plat_prix {
-  padding-right: 1em;
   display: flex;
   flex-direction: column-reverse;
+  padding-right: 0.8em;
 }
 .details_menu .checkbox_container {
   background-color: #99E2D0;
   width: 10%;
   height: 1;
-  margin-right: -150px;
+  margin-right: -99px;
   color: white;
   transform: scaleX(1);
   display: flex;
