@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap");
 body {
@@ -101,7 +100,7 @@ img {
   align-self: center;
   animation: menuus 900ms;
   transform-origin: top left;
-  overflow: auto;
+  overflow: hidden;
 }
 .details_menu .menu__card--1 {
   animation-delay: 90ms;
@@ -135,8 +134,9 @@ img {
   animation: checkbox 500ms;
   transform-origin: right;
 }
-.details_menu .menu__card:hover .i.far.fa-check-circle {
+.details_menu .menu__card:hover .checkbox_container .checkbox {
   transform: rotate(360deg);
+  transition: 0.3s ease-out;
 }
 .details_menu .menu_description {
   width: 87%;
@@ -161,16 +161,18 @@ img {
   height: 1;
   margin-right: -150px;
   color: white;
-  transform: scaleX(1) rotate(360°);
+  transform: scaleX(1);
   display: flex;
   justify-content: center;
+}
+.details_menu .checkbox_container .checkbox {
+  transform: rotate(180deg);
 }
 .details_menu .checkbox_container .checkbox i.far.fa-check-circle {
   display: flex;
   height: 100%;
   align-items: center;
   font-size: 1.3em;
-  transform: rotate(180deg);
 }
 
 @keyframes menuus {

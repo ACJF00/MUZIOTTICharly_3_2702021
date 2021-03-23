@@ -81,6 +81,9 @@ header{
     justify-content: space-between;
     padding-bottom: 3em;
     font-weight: 600;
+    form{
+        width: 100%;
+    }
     .accroche{
         display: flex;
         flex-direction: column;
@@ -91,7 +94,7 @@ header{
             margin-bottom: 1em;
         }
     #rechercher {
-        width: 375px;
+        width: 100%;
         background-color: #EAEAEA;
         border: none;
         text-align: center;

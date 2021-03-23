@@ -100,7 +100,7 @@ img{
             align-self: center;
             animation: menuus 900ms;
             transform-origin: top left;
-            overflow: auto;
+            overflow: hidden;
                 @for $i from 1 through 9 {
                     &--#{$i} {
                         animation-delay: 90ms * $i;
@@ -111,8 +111,9 @@ img{
                     animation: checkbox 500ms;
                     transform-origin: right;
                     }
-                &:hover .i.far.fa-check-circle {
+                &:hover .checkbox_container .checkbox {
                     transform: rotate(360deg);
+                    transition: 0.3s ease-out;
                 }
                 }
             .menu_description{
@@ -138,16 +139,16 @@ img{
                 height: 1;
                 margin-right: -150px;
                 color: white;
-                transform: scaleX(1) rotate(360°);
+                transform: scaleX(1);
                 display: flex;
                 justify-content: center;
                 .checkbox {
+                    transform: rotate(180deg);
                     i.far.fa-check-circle {
                         display: flex;
                         height: 100%;
                         align-items: center;
                         font-size: 1.3em;
-                        transform: rotate(180deg);
                     }
                 }
             }
