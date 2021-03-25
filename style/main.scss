@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap');
 
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+
 body
      {
         font-family: 'Roboto', sans-serif, font-awesome;
@@ -13,12 +17,12 @@ html{
 
 .container {
     display: flex;
-    position: absolute;
+    position: fixed;
     align-items: center;
     justify-content: center;
-    animation: container;
-    margin-top: 30em;
     width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 .load {
     width: 35%;
@@ -26,12 +30,11 @@ html{
     display: flex;
     justify-content: space-evenly;
     &__bar {
-        background-image: linear-gradient(#FF79DA, #9356DC);
+        background-image: linear-gradient($color-secondary, $color-primary);
         height: 100%;
         width: 1em;
-        animation: bars 1000ms backwards ease-in-out alternate;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
+        animation: bars 0.5s both ease-out alternate-reverse;
+        animation-iteration-count: 3;
         @for $i from 1 through 5 {
             &--#{$i} {
                 animation-delay: 200ms * $i;
@@ -42,20 +45,11 @@ html{
 
 @keyframes bars {
     0% {
-        transform: scaleY(0.5);
+        transform: scaleY(0);
     }
     100% {
         transform: scaleY(1);
-        opacity: 0;
-    }
-}
-
-@keyframes container {
-    0% {
-        display: block;
-    }
-    100% {
-        display: none;
+        visibility: hidden;
     }
 }
 
@@ -81,6 +75,12 @@ header{
     font-weight: 600;
     form{
         width: 100%;
+        i.fas.fa-map-marker-alt {
+            position: absolute;
+            display: flex;
+            left: 6.8em;
+            top: 3.8em;
+        }
     }
     .accroche{
         display: flex;
@@ -101,7 +101,7 @@ header{
     }
     #explorer{
         border-radius: 100px;
-        background-image: linear-gradient(#FF79DA, #9356DC);
+        background-image: linear-gradient($color-secondary, $color-primary);
         color: white;
         padding: 0.8em;
         border: none;
@@ -109,6 +109,7 @@ header{
         padding: 1.3em;
         box-shadow: 0.15em 0.15em 0.15em 0.15em #DCDCDC;
         outline: none;
+        cursor: pointer;
         &:hover{
             opacity: 0.8;
             box-shadow: 0.15em 0.15em 0.15em 0.15em #b8b6b6;
@@ -146,7 +147,7 @@ header{
             align-items: center;
             box-shadow: 0.15em 0.15em 0.15em 0.15em #dcdcdc;
                 span{
-                    background-color: #9356DC;
+                    background-color: $color-primary;
                     color: white;
                     border-radius: 20px;
                     position: absolute;
@@ -196,7 +197,7 @@ header{
         span{
             position: absolute;
             margin-left: -5.5em;
-            background-color: #99E2D0;
+            background-color: $color-tertiary;
             justify-content: normal;
             margin-top: 1em;
             padding: 0.5em;
@@ -216,7 +217,7 @@ header{
                 margin: -1.2em;
                 }
             i.fas.fa-heart{
-                color: #9356DC;
+                color: $color-primary;
                 display: flex;
                 align-items: center;
                 opacity: 0;
