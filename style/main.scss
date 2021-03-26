@@ -169,6 +169,12 @@ header{
             &:hover .fas{
                 color: $color-primary;
             }
+            &:hover {
+                background-color: #ede8e9;
+            }
+            &:hover input{
+                background-color: #ede8e9;
+            }
                 span{
                     background-color: $color-primary;
                     color: white;

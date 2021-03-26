@@ -175,6 +175,12 @@ header img {
 .fonctionnement .boutonsfiltre li:hover .fas {
   color: #9356DC;
 }
+.fonctionnement .boutonsfiltre li:hover {
+  background-color: #ede8e9;
+}
+.fonctionnement .boutonsfiltre li:hover input {
+  background-color: #ede8e9;
+}
 .fonctionnement .boutonsfiltre li span {
   background-color: #9356DC;
   color: white;

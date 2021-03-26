@@ -98,15 +98,15 @@ img{
         .menu__card{
             border-radius: 10px 10px 10px 10px;
             width: 85%;
+            height: 20%;
             display: flex;
             justify-content: space-between;
-            padding: 0.6em;
             box-shadow: 0.15em 0.15em 0.15em 0.15em #dcdcdc;
             background-color: white;
             margin: 0.3em 0;
             align-self: center;
             animation: menuus 900ms;
-            transform-origin: top left;
+            transform-origin: bottom;
             overflow: hidden;
             cursor: pointer;
                 @for $i from 1 through 9 {
@@ -115,7 +115,7 @@ img{
                      }
                 }
                 &:hover .checkbox_container {
-                    margin: -0.6em -0.6em -0.6em 0em;
+                    margin: -0.6em 0em -0.6em -0.2em;
                     animation: checkbox 500ms ease-in forwards;
                     /*transform-origin: right; */
                     width: 5em;
@@ -131,6 +131,8 @@ img{
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
+                padding-top: 0.5em;
+                padding-left: 0.5em;
                 .plat_nom {
                     text-overflow: ellipsis;
                     overflow: hidden;
@@ -154,12 +156,13 @@ img{
                 display: flex;
                 flex-direction: column-reverse;
                 padding-right: 0.8em;
+                padding-bottom: 0.3em;
             }
             .checkbox_container{
                 background-color: $color-tertiary;
                 width: 10%;
                 height: 1;
-                margin-right: -99px;
+                margin-right: -75px;
                 color: white;
                 transform: scaleX(1);
                 display: flex;
