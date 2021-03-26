@@ -135,8 +135,8 @@ img {
 }
 .details_menu .menu__card:hover .checkbox_container {
   margin: -0.6em -0.6em -0.6em 0em;
-  animation: checkbox 500ms;
-  transform-origin: right;
+  animation: checkbox 500ms ease-in forwards;
+  /*transform-origin: right; */
   width: 5em;
   transition-duration: 0.5s;
 }
@@ -156,7 +156,6 @@ img {
 }
 .details_menu .menu_description .plat_compo {
   text-overflow: ellipsis;
-  /* display: flex; */
   flex-wrap: nowrap;
   overflow: hidden;
 }
@@ -204,10 +203,10 @@ img {
 }
 @keyframes checkbox {
   0% {
-    transform: scaleX(0.8);
+    transform: scale(0.8);
   }
   100% {
-    transform: scaleX(1);
+    transform: scale(1);
   }
 }
 .command_button {
