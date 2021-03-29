@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap");
 body {
@@ -36,48 +37,48 @@ img {
   width: 100%;
 }
 
-.details_menu {
-  background-color: #F6F6F6;
-  position: relative;
-  width: 100%;
-  margin-top: -3em;
-  border-radius: 2em 2em 0em 0em;
-  padding-top: 1em;
-}
-.details_menu .resto_nom {
+.resto_nom {
   display: flex;
   justify-content: space-between;
   padding-left: 1em;
+  position: relative;
+  background-color: #F6F6F6;
+  border-radius: 2em 2em 0em 0em;
+  margin-top: -3em;
 }
-.details_menu .resto_nom i {
+.resto_nom i {
   display: flex;
   align-items: center;
   font-size: 25px;
 }
-.details_menu .resto_nom i.far.fa-heart {
+.resto_nom i.far.fa-heart {
   position: absolute;
-  top: 2em;
+  top: 1.5em;
   right: 2em;
   left: 13em;
 }
-.details_menu .resto_nom i.fas.fa-heart {
+.resto_nom i.fas.fa-heart {
   position: absolute;
-  top: 2em;
+  top: 1.5em;
   right: 2em;
   opacity: 0;
   color: #9356DC;
   left: 13em;
   cursor: pointer;
 }
-.details_menu .resto_nom i.fas.fa-heart:hover {
+.resto_nom i.fas.fa-heart:hover {
   opacity: 1;
   transition: 0.5s ease-out;
+}
+
+.details_menu {
+  background-color: #F6F6F6;
+  width: 100%;
 }
 .details_menu section {
   height: 18em;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 .details_menu section h2 {
   padding-left: 1em;
@@ -90,53 +91,52 @@ img {
   width: 12%;
   margin-left: 1.2em;
   border-color: #99E2D0;
+  margin-bottom: 1em;
 }
 .details_menu .menu__card {
   border-radius: 10px 10px 10px 10px;
   width: 85%;
-  height: 20%;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   box-shadow: 0.15em 0.15em 0.15em 0.15em #dcdcdc;
   background-color: white;
-  margin: 0.3em 0;
-  align-self: center;
-  animation: menuus 900ms;
-  transform-origin: bottom;
+  margin-bottom: 20px;
+  animation: menuus 1s;
   overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
   cursor: pointer;
 }
 .details_menu .menu__card--1 {
-  animation-delay: 90ms;
+  animation-delay: 100ms;
 }
 .details_menu .menu__card--2 {
-  animation-delay: 180ms;
+  animation-delay: 200ms;
 }
 .details_menu .menu__card--3 {
-  animation-delay: 270ms;
+  animation-delay: 300ms;
 }
 .details_menu .menu__card--4 {
-  animation-delay: 360ms;
+  animation-delay: 400ms;
 }
 .details_menu .menu__card--5 {
-  animation-delay: 450ms;
+  animation-delay: 500ms;
 }
 .details_menu .menu__card--6 {
-  animation-delay: 540ms;
+  animation-delay: 600ms;
 }
 .details_menu .menu__card--7 {
-  animation-delay: 630ms;
+  animation-delay: 700ms;
 }
 .details_menu .menu__card--8 {
-  animation-delay: 720ms;
+  animation-delay: 800ms;
 }
 .details_menu .menu__card--9 {
-  animation-delay: 810ms;
+  animation-delay: 900ms;
 }
 .details_menu .menu__card:hover .checkbox_container {
-  margin: -0.6em 0em -0.6em -0.2em;
-  animation: checkbox 500ms ease-in forwards;
-  /*transform-origin: right; */
+  margin: 0;
   width: 5em;
   transition-duration: 0.5s;
 }
@@ -149,7 +149,7 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  padding-top: 0.5em;
+  padding-top: 0.8em;
   padding-left: 0.5em;
 }
 .details_menu .menu_description .plat_nom {
@@ -171,10 +171,9 @@ img {
   font-weight: 300;
 }
 .details_menu .plat_prix {
-  display: flex;
-  flex-direction: column-reverse;
   padding-right: 0.8em;
   padding-bottom: 0.3em;
+  padding-top: 2.5em;
 }
 .details_menu .checkbox_container {
   background-color: #99E2D0;
@@ -182,9 +181,9 @@ img {
   height: 1;
   margin-right: -75px;
   color: white;
-  transform: scaleX(1);
   display: flex;
   justify-content: center;
+  transition-duration: 0.5s;
 }
 .details_menu .checkbox_container .checkbox {
   transform: rotate(180deg);
@@ -198,18 +197,12 @@ img {
 
 @keyframes menuus {
   0% {
-    transform: scale(0);
+    margin-top: 10px;
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
-  }
-}
-@keyframes checkbox {
-  0% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(1);
+    margin-top: 0;
+    opacity: 1;
   }
 }
 .command_button {
@@ -266,5 +259,108 @@ footer span {
   color: white;
   padding-left: 0.8em;
 }
+
+/* VERSION DESKTOP */
+@media all and (min-width: 1024px) {
+  header .fas.fa-arrow-left {
+    display: flex;
+    width: 0;
+    margin-left: -180px;
+    font-size: 33px;
+    height: 80%;
+    align-items: center;
+  }
+  header img {
+    width: 38%;
+  }
+
+  img {
+    width: 100%;
+    height: 20em;
+    object-fit: cover;
+  }
+
+  .resto_nom {
+    width: 100%;
+  }
+  .resto_nom .fa-heart {
+    justify-content: flex-end;
+    font-size: 1.6em;
+  }
+  .resto_nom .fa-heart .fa-heart:before {
+    content: "";
+    width: 90%;
+    display: flex;
+    place-content: flex-end;
+  }
+
+  .details_menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .details_menu section {
+    width: 33%;
+    height: 23em;
+    justify-content: space-around;
+  }
+  .details_menu section .menu__card {
+    height: 70px;
+  }
+
+  footer {
+    display: flex;
+  }
+  footer span {
+    width: 20%;
+    font-size: 3em;
+    align-self: center;
+  }
+  footer ul {
+    margin-left: 10em;
+  }
+}
+/* VERSION DESKTOP */
+/* VERSION TABLETTE */
+@media all and (min-width: 480px) and (max-width: 1024px) {
+  header i.fas.fa-arrow-left {
+    position: absolute;
+    top: -11.3em;
+    left: 4em;
+    font-size: 2em;
+  }
+
+  img {
+    height: 17em;
+    object-fit: cover;
+  }
+
+  .resto_nom h1 {
+    font-size: 3em;
+  }
+  .resto_nom .fa-heart {
+    font-size: 2em;
+    justify-content: flex-end;
+  }
+
+  .details_menu section {
+    height: 16em;
+    font-size: 1.8em;
+  }
+  .details_menu section .menu__card {
+    height: 4em;
+  }
+  .details_menu section .menu__card .menu_description .plat_compo {
+    font-size: 1em;
+  }
+  .details_menu section .menu__card .plat_prix {
+    font-size: 1em;
+    display: flex;
+    align-items: flex-end;
+    width: 5%;
+  }
+}
+/* VERSION TABLETTE */
 
 /*# sourceMappingURL=alafrancaise.css.map */

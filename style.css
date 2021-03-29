@@ -11,12 +11,15 @@ html {
 
 .container {
   display: flex;
+  visibility: hidden;
   position: fixed;
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.5);
-  bottom: 100%;
   animation: container 3s ease;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
 }
 
 .load {
@@ -51,21 +54,11 @@ html {
 @keyframes container {
   0% {
     opacity: 1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-  99% {
-    opacity: 1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    visibility: visible;
   }
   100% {
     opacity: 0;
-    top: 100;
+    visibility: hidden;
   }
 }
 @keyframes bars {
@@ -97,14 +90,14 @@ header img {
   padding-bottom: 3em;
   font-weight: 600;
 }
-.search form {
-  width: 100%;
-}
-.search form i.fas.fa-map-marker-alt {
+.search i.fas.fa-map-marker-alt {
   position: absolute;
   display: flex;
   left: 6.8em;
   top: 3.8em;
+}
+.search form {
+  width: 100%;
 }
 .search .accroche {
   display: flex;
@@ -307,5 +300,67 @@ footer span {
   color: white;
   padding-left: 0.8em;
 }
+
+/* VERSION DESKTOP */
+@media all and (min-width: 1024px) {
+  .container .load {
+    width: 10%;
+  }
+
+  header img {
+    width: 38%;
+  }
+
+  .search i.fas.fa-map-marker-alt {
+    position: absolute;
+    top: 5.1em;
+    font-size: 1.5em;
+    left: 24em;
+  }
+  .search #rechercher {
+    height: 2em;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .fonctionnement .boutonsfiltre {
+    flex-direction: row;
+    width: 90%;
+    align-self: center;
+    height: 6em;
+  }
+  .fonctionnement .boutonsfiltre li {
+    width: 27%;
+    height: 2em;
+  }
+
+  .resto {
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 38em;
+  }
+  .resto article {
+    width: 43%;
+  }
+  .resto article img {
+    object-fit: cover;
+  }
+  .resto article .txt_resto .fa-heart {
+    font-size: 1.6em;
+  }
+
+  footer {
+    display: flex;
+  }
+  footer span {
+    width: 20%;
+    font-size: 3em;
+    align-self: center;
+  }
+  footer ul {
+    margin-left: 10em;
+  }
+}
+/* VERSION DESKTOP */
 
 /*# sourceMappingURL=style.css.map */

@@ -40,48 +40,46 @@ header{
 img{
     width: 100%;
 }
-
-.details_menu{
-    background-color: #F6F6F6;
+.resto_nom{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1em;
     position: relative;
-    width: 100%;
-    margin-top: -3em;
+    background-color: #F6F6F6;
     border-radius: 2em 2em 0em 0em;
-    padding-top: 1em;
-    .resto_nom{
+    margin-top: -3em;
+    i{
         display: flex;
-        justify-content: space-between;
-        padding-left: 1em;
-        i{
-            display: flex;
-            align-items: center;
-            font-size: 25px;
-        }
-        i.far.fa-heart{
-            position: absolute;
-            top: 2em;
-            right: 2em;
-            left: 13em;
-        }
-        i.fas.fa-heart {
-            position: absolute;
-            top: 2em;
-            right: 2em;
-            opacity: 0;
-            color: $color-primary;
-            left: 13em;
-            cursor: pointer;
-            &:hover{
-                opacity: 1;
-                transition: 0.5s ease-out;
-            }
+        align-items: center;
+        font-size: 25px;
+    }
+    i.far.fa-heart{
+        position: absolute;
+        top: 1.5em;
+        right: 2em;
+        left: 13em;
+    }
+    i.fas.fa-heart {
+        position: absolute;
+        top: 1.5em;
+        right: 2em;
+        opacity: 0;
+        color: $color-primary;
+        left: 13em;
+        cursor: pointer;
+        &:hover{
+            opacity: 1;
+            transition: 0.5s ease-out;
         }
     }
+}
+.details_menu{
+    background-color: #F6F6F6;
+    width: 100%;
     section{
     height: 18em;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
         h2{
             padding-left: 1em;
             margin-bottom: 0;
@@ -93,31 +91,30 @@ img{
             width: 12%;
             margin-left: 1.2em;
             border-color: $color-tertiary;
+            margin-bottom: 1em;
         }
     }
         .menu__card{
             border-radius: 10px 10px 10px 10px;
             width: 85%;
-            height: 20%;
+            height: 80px;
             display: flex;
             justify-content: space-between;
             box-shadow: 0.15em 0.15em 0.15em 0.15em #dcdcdc;
             background-color: white;
-            margin: 0.3em 0;
-            align-self: center;
-            animation: menuus 900ms;
-            transform-origin: bottom;
+            margin-bottom: 20px;
+            animation: menuus 1s;
             overflow: hidden;
+            margin-right: auto;
+            margin-left: auto;
             cursor: pointer;
                 @for $i from 1 through 9 {
                     &--#{$i} {
-                        animation-delay: 90ms * $i;
+                        animation-delay: 100ms * $i;
                      }
                 }
                 &:hover .checkbox_container {
-                    margin: -0.6em 0em -0.6em -0.2em;
-                    animation: checkbox 500ms ease-in forwards;
-                    /*transform-origin: right; */
+                    margin: 0;
                     width: 5em;
                     transition-duration: 0.5s;
                     }
@@ -131,7 +128,7 @@ img{
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                padding-top: 0.5em;
+                padding-top: 0.8em;
                 padding-left: 0.5em;
                 .plat_nom {
                     text-overflow: ellipsis;
@@ -153,10 +150,9 @@ img{
                 font-weight: 300;
             }
             .plat_prix{
-                display: flex;
-                flex-direction: column-reverse;
                 padding-right: 0.8em;
                 padding-bottom: 0.3em;
+                padding-top: 2.5em;
             }
             .checkbox_container{
                 background-color: $color-tertiary;
@@ -164,9 +160,9 @@ img{
                 height: 1;
                 margin-right: -75px;
                 color: white;
-                transform: scaleX(1);
                 display: flex;
                 justify-content: center;
+                transition-duration: 0.5s;
                 .checkbox {
                     transform: rotate(180deg);
                     i.far.fa-check-circle {
@@ -182,23 +178,15 @@ img{
 
 @keyframes menuus{
 0% {
-    transform: scale(0);
+    margin-top: 10px;
+    opacity: 0;
 }
 
 100% {
-    transform: scale(1);
+    margin-top: 0;
+    opacity: 1;
 }
 }
-
-@keyframes checkbox{
-    0% {
-        transform: scale(0.8);
-    }
-    
-    100% {
-        transform: scale(1);
-    }
-    }
 
 .command_button {
     width: 100%;
@@ -256,3 +244,118 @@ footer{
         padding-left: 0.8em;
     }
 }
+
+/* VERSION DESKTOP */
+
+@media all and (min-width: 1024px)
+{
+header{
+    .fas.fa-arrow-left {
+        display: flex;
+        width: 0;
+        margin-left: -180px;
+        font-size: 33px;
+        height: 80%;
+        align-items: center;
+    }
+        img{
+            width: 38%;
+        }
+    }
+img{
+    width: 100%;
+    height: 20em;
+    object-fit: cover;
+}
+.resto_nom{
+    width: 100%;
+    .fa-heart{
+        justify-content: flex-end;
+        font-size: 1.6em;
+        .fa-heart:before {
+            content: "\f004";
+            width: 90%;
+            display: flex;
+            place-content: flex-end;
+        }
+    }
+}
+.details_menu{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    section{
+        width: 33%;
+        height: 23em;
+        justify-content: space-around;
+        .menu__card{
+            height: 70px;
+        }
+        }
+    }
+
+footer{
+    display: flex;
+    span{
+        width: 20%;
+        font-size: 3em;
+        align-self: center;
+    }
+    ul{
+        margin-left: 10em;
+    }
+}
+
+}
+
+/* VERSION DESKTOP */
+
+/* VERSION TABLETTE */
+
+@media all and (min-width: 480px) and (max-width: 1024px)
+{
+header{
+    i.fas.fa-arrow-left{
+        position: absolute;
+        top: -11.3em;
+        left: 4em;
+        font-size: 2em;
+    }
+    }
+img{
+    height: 17em;
+    object-fit: cover;
+}
+.resto_nom{
+    h1{
+        font-size: 3em;
+    }
+    .fa-heart{
+        font-size: 2em;
+        justify-content: flex-end;
+    }
+}
+.details_menu{
+    section{
+        height: 16em;
+        font-size: 1.8em;
+        .menu__card{
+            height: 4em;
+            .menu_description{
+                .plat_compo{
+                    font-size: 1em;
+                }
+            }
+                .plat_prix{
+                    font-size: 1em;
+                    display: flex;
+                    align-items: flex-end;
+                    width: 5%;
+                } 
+        }
+    }
+}
+}
+
+/* VERSION TABLETTE */
