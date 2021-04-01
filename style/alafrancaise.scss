@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap');
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap') ;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap') ;
 
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
@@ -159,7 +160,6 @@ img{
             .checkbox_container{
                 background-color: $color-tertiary;
                 width: 10%;
-                height: 1;
                 margin-right: -75px;
                 color: white;
                 display: flex;

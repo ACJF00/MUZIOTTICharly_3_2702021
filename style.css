@@ -151,7 +151,7 @@ header img {
   counter-reset: section;
   list-style-type: none;
 }
-.fonctionnement .boutonsfiltre li {
+.fonctionnement .boutonsfiltre .function_button {
   list-style: none;
   border-radius: 10px 10px 10px 10px;
   background-color: #F6F6F6;
@@ -165,16 +165,16 @@ header img {
   align-items: center;
   box-shadow: 0.15em 0.15em 0.15em 0.15em #dcdcdc;
 }
-.fonctionnement .boutonsfiltre li:hover .fas {
+.fonctionnement .boutonsfiltre .function_button:hover .fas {
   color: #9356DC;
 }
-.fonctionnement .boutonsfiltre li:hover {
+.fonctionnement .boutonsfiltre .function_button:hover {
   background-color: #ede8e9;
 }
-.fonctionnement .boutonsfiltre li:hover input {
+.fonctionnement .boutonsfiltre .function_button:hover input {
   background-color: #ede8e9;
 }
-.fonctionnement .boutonsfiltre li span {
+.fonctionnement .boutonsfiltre .function_button span {
   background-color: #9356DC;
   color: white;
   border-radius: 20px;
