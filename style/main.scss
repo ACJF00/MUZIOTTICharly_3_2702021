@@ -336,7 +336,7 @@ header{
         width: 90%;
         align-self: center;
         height: 6em;
-        li{
+        .function_button{
             width: 27%;
             height: 2em;
         }
@@ -358,11 +358,11 @@ header{
             }
         }
         i.far.fa-heart{
-            left: 16em;
+            left: 22em;
             top: 7em;
             }
             i.fas.fa-heart{
-                left: 16em;
+                left: 22em;
                 top: 7em;
                 }
     }

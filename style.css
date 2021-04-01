@@ -333,7 +333,7 @@ footer span {
     align-self: center;
     height: 6em;
   }
-  .fonctionnement .boutonsfiltre li {
+  .fonctionnement .boutonsfiltre .function_button {
     width: 27%;
     height: 2em;
   }
@@ -353,11 +353,11 @@ footer span {
     font-size: 1.6em;
   }
   .resto article i.far.fa-heart {
-    left: 16em;
+    left: 22em;
     top: 7em;
   }
   .resto article i.fas.fa-heart {
-    left: 16em;
+    left: 22em;
     top: 7em;
   }
 
