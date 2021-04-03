@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap");
 body {
@@ -35,6 +34,8 @@ header img {
 
 img {
   width: 100%;
+  height: 15em;
+  object-fit: cover;
 }
 
 .resto_nom {
@@ -53,19 +54,17 @@ img {
 }
 .resto_nom i.far.fa-heart {
   position: absolute;
-  top: 1.5em;
-  right: 2em;
-  left: 13em;
+  top: 30px;
+  right: 20px;
 }
 .resto_nom i.fas.fa-heart {
   position: absolute;
-  top: 1.5em;
-  right: 2em;
+  top: 30px;
+  right: 20px;
   opacity: 0;
   background: -webkit-linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  left: 13em;
   cursor: pointer;
 }
 .resto_nom i.fas.fa-heart:hover {
@@ -78,7 +77,7 @@ img {
   width: 100%;
 }
 .details_menu section {
-  height: 18em;
+  height: fit-content;
   display: flex;
   flex-direction: column;
 }
@@ -98,7 +97,7 @@ img {
 .details_menu .menu__card {
   border-radius: 10px 10px 10px 10px;
   width: 85%;
-  height: 80px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   box-shadow: 0.15em 0.15em 0.15em 0.15em #dcdcdc;
@@ -108,34 +107,37 @@ img {
   overflow: hidden;
   margin-right: auto;
   margin-left: auto;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 2s;
   cursor: pointer;
 }
 .details_menu .menu__card--1 {
-  animation-delay: 100ms;
+  animation-duration: 500ms;
 }
 .details_menu .menu__card--2 {
-  animation-delay: 200ms;
+  animation-duration: 1000ms;
 }
 .details_menu .menu__card--3 {
-  animation-delay: 300ms;
+  animation-duration: 1500ms;
 }
 .details_menu .menu__card--4 {
-  animation-delay: 400ms;
+  animation-duration: 2000ms;
 }
 .details_menu .menu__card--5 {
-  animation-delay: 500ms;
+  animation-duration: 2500ms;
 }
 .details_menu .menu__card--6 {
-  animation-delay: 600ms;
+  animation-duration: 3000ms;
 }
 .details_menu .menu__card--7 {
-  animation-delay: 700ms;
+  animation-duration: 3500ms;
 }
 .details_menu .menu__card--8 {
-  animation-delay: 800ms;
+  animation-duration: 4000ms;
 }
 .details_menu .menu__card--9 {
-  animation-delay: 900ms;
+  animation-duration: 4500ms;
 }
 .details_menu .menu__card:hover .checkbox_container {
   margin: 0;
@@ -264,12 +266,8 @@ footer span {
 /* VERSION DESKTOP */
 @media all and (min-width: 1024px) {
   header .fas.fa-arrow-left {
-    display: flex;
-    width: 0;
     margin-left: -180px;
     font-size: 33px;
-    height: 80%;
-    align-items: center;
   }
   header img {
     width: 38%;
@@ -282,14 +280,14 @@ footer span {
   }
 
   .resto_nom {
-    width: 100%;
+    width: 99%;
   }
   .resto_nom .fa-heart {
     justify-content: flex-end;
     font-size: 1.6em;
+    padding-right: 20px;
   }
   .resto_nom .fa-heart .fa-heart:before {
-    content: "";
     width: 90%;
     display: flex;
     place-content: flex-end;
@@ -327,8 +325,8 @@ footer span {
 @media all and (min-width: 480px) and (max-width: 1024px) {
   header i.fas.fa-arrow-left {
     position: absolute;
-    top: -11.3em;
-    left: 4em;
+    top: -360px;
+    left: 110px;
     font-size: 2em;
   }
 
@@ -345,8 +343,11 @@ footer span {
     justify-content: flex-end;
   }
 
+  .details_menu {
+    padding-bottom: 2em;
+  }
   .details_menu section {
-    height: 16em;
+    height: fit-content;
     font-size: 1.8em;
   }
   .details_menu section .menu__card {

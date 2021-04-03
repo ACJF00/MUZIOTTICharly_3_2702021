@@ -40,6 +40,8 @@ header{
 
 img{
     width: 100%;
+    height: 15em;
+    object-fit: cover;
 }
 .resto_nom{
     display: flex;
@@ -56,19 +58,17 @@ img{
     }
     i.far.fa-heart{
         position: absolute;
-        top: 1.5em;
-        right: 2em;
-        left: 13em;
+        top: 30px;
+        right: 20px;
     }
     i.fas.fa-heart {
         position: absolute;
-        top: 1.5em;
-        right: 2em;
+        top: 30px;
+        right: 20px;
         opacity: 0;
         background: -webkit-linear-gradient($color-secondary, $color-primary);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        left: 13em;
         cursor: pointer;
         &:hover{
             opacity: 1;
@@ -80,7 +80,7 @@ img{
     background-color: #F6F6F6;
     width: 100%;
     section{
-    height: 18em;
+    height: fit-content;
     display: flex;
     flex-direction: column;
         h2{
@@ -100,7 +100,7 @@ img{
         .menu__card{
             border-radius: 10px 10px 10px 10px;
             width: 85%;
-            height: 80px;
+            height: 60px;
             display: flex;
             justify-content: space-between;
             box-shadow: 0.15em 0.15em 0.15em 0.15em #dcdcdc;
@@ -110,10 +110,13 @@ img{
             overflow: hidden;
             margin-right: auto;
             margin-left: auto;
+            opacity: 1;
+            transition-property: opacity;
+            transition-duration: 2s;
             cursor: pointer;
                 @for $i from 1 through 9 {
                     &--#{$i} {
-                        animation-delay: 100ms * $i;
+                        animation-duration: 500ms * $i;
                      }
                 }
                 &:hover .checkbox_container {
@@ -253,12 +256,8 @@ footer{
 {
 header{
     .fas.fa-arrow-left {
-        display: flex;
-        width: 0;
         margin-left: -180px;
         font-size: 33px;
-        height: 80%;
-        align-items: center;
     }
         img{
             width: 38%;
@@ -270,12 +269,12 @@ img{
     object-fit: cover;
 }
 .resto_nom{
-    width: 100%;
+    width: 99%;
     .fa-heart{
         justify-content: flex-end;
         font-size: 1.6em;
+        padding-right: 20px;
         .fa-heart:before {
-            content: "\f004";
             width: 90%;
             display: flex;
             place-content: flex-end;
@@ -320,8 +319,8 @@ footer{
 header{
     i.fas.fa-arrow-left{
         position: absolute;
-        top: -11.3em;
-        left: 4em;
+        top: -360px;
+        left: 110px;
         font-size: 2em;
     }
     }
@@ -339,8 +338,9 @@ img{
     }
 }
 .details_menu{
+    padding-bottom: 2em;
     section{
-        height: 16em;
+        height: fit-content;
         font-size: 1.8em;
         .menu__card{
             height: 4em;

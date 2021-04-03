@@ -237,8 +237,8 @@ header{
                 display: flex;
                 align-items: center;
                 position: absolute;
-                top: 12em;
-                left: 19em;
+                top: 186px;
+                right: 14px;
                 }
             i.fas.fa-heart{
                 background: -webkit-linear-gradient($color-secondary, $color-primary);
@@ -248,8 +248,8 @@ header{
                 align-items: center;
                 opacity: 0;
                 position: absolute;
-                top: 12em;
-                left: 19em;
+                top: 186px;
+                right: 14px;
                 &:hover{
                     opacity: 1;
                     transition: 0.5s ease-out;
@@ -355,15 +355,16 @@ header{
         .txt_resto{
             .fa-heart{
                 font-size: 1.6em;
+                bottom: -47px;
             }
         }
         i.far.fa-heart{
-            left: 22em;
-            top: 7em;
+            right: 16px;
+            bottom: 20px;
             }
             i.fas.fa-heart{
-                left: 22em;
-                top: 7em;
+                right: 16px;
+                bottom: 20px;
                 }
     }
 }
@@ -388,6 +389,9 @@ footer{
 
 @media all and (min-width: 480px) and (max-width: 1024px)
 {
+body{
+    width: 806px;
+}
 .container{
     .load{
         width: 20%;
@@ -424,7 +428,7 @@ header{
     }
     .boutonsfiltre{
         flex-direction: column;
-        width: 100%;
+        width: 90%;
         align-self: center;
         height: 18em;
         li{
@@ -455,6 +459,7 @@ header{
         .txt_resto{
             .fa-heart{
                 font-size: 1.6em;
+                bottom: -39px;
             }
         }
     }
